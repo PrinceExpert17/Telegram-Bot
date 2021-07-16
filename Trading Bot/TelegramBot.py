@@ -1,6 +1,12 @@
-# https://api.telegram.org/bot/1807912789:AAFAdGju6F6q_nBJ9HoI8CG8alsvfe7BisY/getUpdates
-# chatID: -557968202
-# https://api.telegram.org/bot1807912789:AAFAdGju6F6q_nBJ9HoI8CG8alsvfe7BisY/sendMessage?chat_id=-557968202&text='Just a test'
+# Insert the Bot Father API TOKEN you created
+# https://api.telegram.org/bot{API TOKEN}/getUpdates
+
+# Add the bot username you created with Bot father to the group and get the ID
+# chatID: {CHAT ID}
+
+# The url below is will help test if the message 'Just a test' is sent to your group
+# https://api.telegram.org/bot{API TOKEN}/sendMessage?chat_id={CHAT ID}&text='Just a test'
+
 import requests
 import time
 
@@ -10,6 +16,6 @@ jokes = ['Did you hear about the mathematician who’s afraid of negative number
          'Hear about the new restaurant called Karma? There’s no menu: You get what you deserve.']
 
 for joke in jokes:
-    baseurl = 'https://api.telegram.org/bot1807912789:AAFAdGju6F6q_nBJ9HoI8CG8alsvfe7BisY/sendMessage?chat_id=-557968202&text="{}"'.format(joke)
+    baseurl = 'https://api.telegram.org/bot{API TOKEN}/sendMessage?chat_id={CHAT ID}&text="{}"'.format(joke)
     requests.get(baseurl)
     time.sleep(5)
